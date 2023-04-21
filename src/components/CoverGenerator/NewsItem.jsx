@@ -18,13 +18,13 @@ const NewsItem = (props) => {
       })
     }
 
-    // fetch('https://api.openai.com/v1/images/generations', requestOptions)
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setImage(data.data[0].url);
-    // }).catch(err => {
-    //   console.log('Ran out of tokens for today! Try tomorrow!');
-    // });
+    fetch('https://api.openai.com/v1/images/generations', requestOptions)
+      .then(response => response.json())
+      .then(data => {
+        setImage(data.data[0].url);
+    }).catch(err => {
+      console.log('Ran out of tokens for today! Try tomorrow!');
+    });
 
   }, []);
 
