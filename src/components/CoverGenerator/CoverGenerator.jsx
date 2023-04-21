@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../Loading/Loading';
 import './cover.scss';
 import NewsItem from './NewsItem';
 
@@ -79,7 +80,7 @@ const CoverGenerator = () => {
 
   if (loading) {
     return (
-      <p>Loading...</p>
+      <Loading/>
     )
   }
 

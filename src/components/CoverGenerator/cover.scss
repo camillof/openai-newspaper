@@ -32,9 +32,15 @@
     margin-bottom: 20px;
     padding: 20px;
 
-    img {
+    .image-placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img, .image-placeholder {
       margin-right: 20px;
-      width: 150px;
+      min-width: 150px;
       height: 150px;
     }
 
@@ -45,7 +51,7 @@
       max-height: fit-content;
       box-shadow: 0 0.05rem 1rem rgba(0, 0, 0, .3);
 
-      img {
+      img, .image-placeholder {
         margin-right: 0px !important;
         width: 300px;
         height: 300px;
@@ -53,26 +59,3 @@
     }
   }
 }
-
-
-
-// .col {
-//   width: calc((100% / 12) * 6);
-//   padding: 0.5rem;
-//   text-align: center;
-// }
-
-// .col:first-child {
-//   width: calc((100% / 12) * 12);
-// }
-
-// @media only screen and (min-width: 768px) {
-//   .col {
-//     width: calc((100% / 12) * 4);
-//     padding: 1rem;
-//   }
-
-//   .col:first-child {
-//     width: calc((100% / 12) * 8);
-//   }
-// }

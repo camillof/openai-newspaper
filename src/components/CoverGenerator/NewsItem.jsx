@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SquareLoader } from 'react-spinners';
 
 const NewsItem = (props) => {
   const [image, setImage] = useState(null);
@@ -29,7 +30,13 @@ const NewsItem = (props) => {
 
   return(
     <div className={`news-item ${props.className ? props.className : ''}`} key={props.item.title}>
-      <img src={image ? image : 'https://via.placeholder.com/150'} alt='Cover Image' />
+      {image ? (
+        <img src={image} alt={props.item.title} />
+      ) : (
+        <div className='image-placeholder'>
+          <SquareLoader />
+        </div>
+      )}
       <div>
         <h1 className='title'>{props.item.title}</h1>
         <p className='description'>{props.item.short_summary}</p>
